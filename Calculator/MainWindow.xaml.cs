@@ -24,18 +24,58 @@ namespace Calculator
         {
             InitializeComponent();
         }
+        public char Op { get; set; } = 'e';
+        public double FirstNumber { get; set; }
+        public double SecondNumber { get; set; }
+        public int Count { get; set; } = 0;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //var result = this.Label.Content.ToString();
-
-            //int.Parse(result);
-            List<int> listofNumber = new List<int>();
-            listofNumber.Add(1);
-            listofNumber.Add(2);
-            List<char> chars = new List<char>();
-            chars.Add('+');
             
+            if (Op == '+')
+            {
+                var result = FirstNumber + SecondNumber;
+                Label.Content = result;
+                FirstNumber = result;
+                SecondNumber = 0;
+                Op = 'e';
+                
+            }
+            else if(Op == '-')
+            {
+                var result = FirstNumber - SecondNumber;
+                Label.Content = result;
+                FirstNumber = result;
+                SecondNumber = 0;
+                Op = 'e';
+            }
+            else if (Op == '*')
+            {
+                var result = FirstNumber * SecondNumber;
+                Label.Content = result;
+                FirstNumber = result;
+                SecondNumber = 0;
+                Op = 'e';
+            }
+            else
+            {
+                if(SecondNumber == 0 && FirstNumber == 0)
+                {
+                    Label.Content = "Result is undefined";
+                }
+                else if(SecondNumber == 0 && FirstNumber > 0)
+                {
+                    Label.Content = "Cannot Divide By Zero";
+                }
+                else
+                {
+                    var result = FirstNumber / SecondNumber;
+                    Label.Content = result;
+                    FirstNumber = result;
+                    SecondNumber = 0;
+                    Op = 'e';
+                }
+            }
 
         }
 
@@ -43,12 +83,30 @@ namespace Calculator
         {
             var sender2 = sender as Button;
             this.Label.Content += sender2.Content.ToString();
+            
+            if (Op=='e')
+            {
+                FirstNumber = double.Parse(Label.Content.ToString());
+                
+            }
+            else
+            {
+                var s2 = SecondNumber.ToString();
+                SecondNumber = double.Parse(s2+sender2.Content.ToString());
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            var last = this.Label.Content.ToString().Length - 1;
-            this.Label.Content= this.Label.Content.ToString().Remove(last);
+            Label.Content = string.Empty;
+            
+        }
+
+        private void OpButton_Click_3(object sender, RoutedEventArgs e)
+        {
+            var sender2 = sender as Button;
+            this.Label.Content += sender2.Content.ToString();
+            Op = char.Parse(sender2.Content.ToString());
         }
     }
 }

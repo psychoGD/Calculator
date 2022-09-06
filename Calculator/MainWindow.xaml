@@ -19,23 +19,23 @@
                 <Button Height="100" Width="100" Content="1" FontSize="30" Background="White" Click="Button_Click_1"></Button>
                 <Button Height="100" Width="100" Content="2" FontSize="30" Background="White" Click="Button_Click_1"></Button>
                 <Button Height="100" Width="100" Content="3" FontSize="30" Background="White" Click="Button_Click_1"></Button>
-                <Button Height="100" Width="100" Content="+" FontSize="30" Click="Button_Click_1"></Button>
+                <Button Height="100" Width="100" Content="+" FontSize="30" Click="OpButton_Click_3"></Button>
 
 
                 <Button Height="100" Width="100" Content="4" FontSize="30" Background="White" Click="Button_Click_1"></Button>
                 <Button Height="100" Width="100" Content="5" FontSize="30" Background="White" Click="Button_Click_1"></Button>
                 <Button Height="100" Width="100" Content="6" FontSize="30" Background="White" Click="Button_Click_1"></Button>
-                <Button Height="100" Width="100" Content="-" FontSize="30" Click="Button_Click_1"></Button>
+                <Button Height="100" Width="100" Content="-" FontSize="30" Click="OpButton_Click_3"></Button>
 
                 <Button Height="100" Width="100" Content="7" FontSize="30" Background="White" Click="Button_Click_1"></Button>
                 <Button Height="100" Width="100" Content="8" FontSize="30" Background="White" Click="Button_Click_1"></Button>
                 <Button Height="100" Width="100" Content="9" FontSize="30" Background="White" Click="Button_Click_1"></Button>
-                <Button Height="100" Width="100" Content="*" FontSize="30" Click="Button_Click_1"></Button>
+                <Button Height="100" Width="100" Content="*" FontSize="30" Click="OpButton_Click_3"></Button>
 
                 <Button Height="100" Width="100" Content="|x|>" FontSize="30" Background="White" Click="Button_Click_2"></Button>
                 <Button Height="100" Width="100" Content="0" FontSize="30" Background="White" Click="Button_Click_1"></Button>
                 <Button Height="100" Width="100" Content="=" FontSize="30" Background="White" Click="Button_Click"></Button>
-                <Button Height="100" Width="100" Content="/" FontSize="30" Click="Button_Click_1"></Button>
+                <Button Height="100" Width="100" Content="/" FontSize="30" Click="OpButton_Click_3"></Button>
             </WrapPanel>
         </Grid>
     </Grid>
